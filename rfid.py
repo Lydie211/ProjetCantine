@@ -1,6 +1,7 @@
 import RPi.GPIO as GPIO
 
 from mfrc522 import SimpleMFRC522
+from controller import Controller
 class RFID:
     
 

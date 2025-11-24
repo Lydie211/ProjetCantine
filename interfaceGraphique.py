@@ -1,13 +1,11 @@
 # coding: utf-8
  
 from tkinter import * 
-
 class IHM:
     
     def __init__(self):
         self.fenetre = Tk()
-        self.inter.demander_choix
-        self.label = Label(fenetre, text='question')
+        self.label = Label(self.fenetre, text='question')
         self.label.pack()    
 
         self.fenetre['bg']='white'
@@ -32,9 +30,9 @@ class IHM:
         Frame1.pack(side=LEFT, padx=50, pady=30)
         Bouton = Button(Frame1, text="Délicieux", height=4, width=9, background="green")
         Bouton.pack()
+        self.demander_choix('fdezgerzgfezf', 'fdezfz')
         
         
-        self.fenetre.mainloop()
     def demander_choix(self, question,listeChoix):
         """modifier les valeurs de question et liste choix
         puis retourner le choix cliqué par l'utilisateur"""
@@ -42,6 +40,9 @@ class IHM:
         self.label.config(text=question)
 
         self.bouton1.config(text=listeChoix[0]) 
+        self.fenetre.mainloop()
+fenetre2 = IHM()
+
     
 
     
