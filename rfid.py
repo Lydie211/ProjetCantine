@@ -1,12 +1,12 @@
-"""import RPi.GPIO as GPIO"""
+import RPi.GPIO as GPIO
 
-from mfrc522 import MFRC522
+from mfrc522 import SimpleMFRC522
 class RFID:
-    reader = MFRC522()
+    
 
     def __init__(self):
         print("Activation du lecteur RFID")
-
+        self.reader = SimpleMFRC522()
 
     def lireRfid(self):
         """Méthode qui permet de faire la lecture du badge

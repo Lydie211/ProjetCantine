@@ -1,7 +1,7 @@
 from interfaceVotes import InterfaceVotes
 from vote import Vote
 from rfid import RFID
-from interfaceGraphique import ihm
+from ihmConsole import IHM
 import time
 from dataTestVotes import dataTestVotes
 

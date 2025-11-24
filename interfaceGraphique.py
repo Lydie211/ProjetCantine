@@ -1,23 +1,22 @@
 # coding: utf-8
  
 from tkinter import * 
-from controller import Controller
-from interfaceVotes import InterfaceVotes
-fenetre = Tk()
-class ihm:
+
+class IHM:
 
     def __init__(self):
+        self.fenetre = Tk()
+        self.fenetre = IHM()
+        self.label = Label(self.fenetre, text='question')
+        self.label.pack()    
 
-        label = Label(fenetre, text='question')
-        label.pack()    
-
-        fenetre['bg']='white'
+        self.fenetre['bg']='white'
 
         # frame 1
         Frame1 = Frame(fenetre, borderwidth=2, relief=GROOVE)
         Frame1.pack(side=LEFT, padx=50, pady=30)
-        Bouton = Button(Frame1, text="Beurk", height=4, width=9, background="red")
-        Bouton.pack()
+        self.bouton1 = Button(Frame1, text="Beurk", height=4, width=9, background="red")
+        self.bouton1.pack()
 
         Frame1 = Frame(fenetre, borderwidth=2, relief=GROOVE)
         Frame1.pack(side=LEFT, padx=50, pady=30)
@@ -34,7 +33,15 @@ class ihm:
         Bouton = Button(Frame1, text="Délicieux", height=4, width=9, background="green")
         Bouton.pack()
 
+    def demander_choix(self, question,listeChoix):
+        """modifier les valeurs de question et liste choix
+        puis retourner le choix cliqué par l'utilisateur"""
 
-        fenetre.mainloop()
+        self.label.config(text=question)
 
-fenetre = ihm()
+        self.bouton1.config(text=listeChoix[0]) 
+
+    
+        self.fenetre.mainloop()
+inter = IHM()
+inter.demander_choix
