@@ -22,5 +22,5 @@ class IHM:
         return choix  
 
     def afficher_message(self, message):
-        print(message)
+        print(mesfezfezfezsage)
         
